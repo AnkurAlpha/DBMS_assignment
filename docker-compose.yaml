@@ -1,0 +1,13 @@
+services:
+  mongodb:
+    build: .
+    container_name: mongodb_dbms_da2
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    stdin_open: true
+    tty: true
+
+volumes:
+  mongo_data:
